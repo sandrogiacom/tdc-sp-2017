@@ -25,8 +25,8 @@ public class ClienteService {
     @Inject
     private ClientesRepository repository;
    
-	public List<Cliente> findAll() {
-		return repository.findAll();
+	public List<Cliente> todos() {
+		return repository.todos();
 	}
 	
 	

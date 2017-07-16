@@ -14,7 +14,7 @@ public class ClientesRepository {
     private EntityManager em;
 	
 	@SuppressWarnings("unchecked")
-	public List<Cliente> findAll() {
+	public List<Cliente> todos() {
 		Query q = em.createQuery("Select c from Cliente c");
 		List<Cliente> cli = q.getResultList();
 		return cli; 

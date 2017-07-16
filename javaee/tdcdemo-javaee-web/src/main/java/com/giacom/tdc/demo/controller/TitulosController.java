@@ -156,7 +156,7 @@ public class TitulosController implements Serializable {
 
 
 	public List<Cliente> getClientes(){
-		return  clienteService.findAll();
+		return  clienteService.todos();
 	}
 
 	public Boolean getMonitoring() {
@@ -166,11 +166,11 @@ public class TitulosController implements Serializable {
 
 	public void setMonitoring(Boolean monitoring) {
 		this.monitoring = monitoring;
-		System.setProperty("javamelody.disabled", String.valueOf(!this.monitoring));
+		System.setProperty("javamelody.disabled", String.valueOf(this.monitoring));
 	}
 	
 	public void updtaePropertie(){
-		//setMonitoring(!this.monitoring);
+		setMonitoring(this.monitoring);
 	}
 	
 }
