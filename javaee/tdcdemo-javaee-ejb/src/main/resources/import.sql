@@ -306,5 +306,5 @@ Insert into COBRANCA.CLIENTE (CODIGO,EMAIL,NOME,TELEFONE) values ('280','chrisgr
 Insert into COBRANCA.CLIENTE (CODIGO,EMAIL,NOME,TELEFONE) values ('281','pansydale@auctor.com','Pansy Dale','(45)58485-4791');
 Insert into COBRANCA.CLIENTE (CODIGO,EMAIL,NOME,TELEFONE) values ('282','sha_craig@nunc.com','Sha Craig','(23)74117-2190');
 Insert into COBRANCA.CLIENTE (CODIGO,EMAIL,NOME,TELEFONE) values ('283','shirlenegates@ornare.com','Shirlene Gates','(46)00082-6120');
-
+Insert into COBRANCA.ID_GEN (SEQ_NAME,SEQ_NUMBER) values ('TITULO_SEQ','10');
 commit;

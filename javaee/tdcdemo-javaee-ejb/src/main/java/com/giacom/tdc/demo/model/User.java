@@ -19,9 +19,9 @@ public class User implements Serializable {
 
 	   
 	@Id
-	@GeneratedValue(strategy = GenerationType.TABLE)
-	@TableGenerator(name = "USER_SEQ", table = "SEQUENCES",pkColumnName = "SEQ_NAME",
-    valueColumnName = "SEQ_NUMBER", pkColumnValue = "SEQUENCE",  allocationSize=1)
+	@GeneratedValue(strategy = GenerationType.TABLE, generator="USER_SEQ")
+	@TableGenerator(name = "USER_SEQ", table = "ID_GEN", pkColumnName = "SEQ_NAME",
+    valueColumnName = "SEQ_NUMBER", pkColumnValue = "USER_SEQ",  allocationSize=1)
 	private Integer id;
 	
 	private String name;

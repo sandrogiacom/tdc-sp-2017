@@ -2,7 +2,6 @@ package com.giacom.tdc.demo.service;
 
 import java.util.logging.Logger;
 
-import javax.annotation.security.PermitAll;
 import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
@@ -17,7 +16,6 @@ import com.giacom.tdc.demo.model.User;
  */
 @Stateless
 @LocalBean
-@PermitAll
 public class UserService {
 
     @Inject

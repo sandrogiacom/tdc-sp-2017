@@ -79,13 +79,7 @@
 					
 					<p:spacer width="10px"></p:spacer>
 					<p:commandButton action="#{userLoginView.logout}" value="Sair" icon="fa fa-sign-out"></p:commandButton>
-
-					<p:spacer width="20px"></p:spacer>
-					<h:outputText value="Monitoramento ativo: " />
-        			<p:selectBooleanButton id="value1" value="#{titulosController.monitoring}" onLabel="Sim" offLabel="Não" style="width:60px" >
-        				<p:ajax update="msgs" listener="#{titulosController.updtaePropertie}" />
-        			</p:selectBooleanButton>
-
+					
 					<p:spacer width="20px"></p:spacer>
 					<h:outputText value="Númedo de títulos: " />
 					<h:outputText style="font-size:20px" id="totalTit" value="#{titulosController.titulos.size()}"></h:outputText>

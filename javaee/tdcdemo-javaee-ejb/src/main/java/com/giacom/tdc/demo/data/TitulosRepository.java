@@ -26,7 +26,7 @@ public class TitulosRepository {
 	}
 
 	public String receber(Titulo titulo) {
-		
+
 		Titulo t = em.find(Titulo.class, titulo.getCodigo());
 		t.setStatus(StatusTitulo.RECEBIDO);
 		em.merge(t);
@@ -52,9 +52,11 @@ public class TitulosRepository {
 	public Titulo salvar(Titulo titulo) {
 		if(titulo.getCodigo() != null && titulo.getCodigo() > 0){
 			em.merge(titulo);
+			System.out.println("Titulo salvo: " + titulo.getCodigo());
 		}else{
 			titulo.setCodigo(null);
 			em.persist(titulo);
+			System.out.println("Titulo criado: " + titulo.getCodigo());
 		}
 		
 		return titulo;

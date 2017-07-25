@@ -158,19 +158,5 @@ public class TitulosController implements Serializable {
 	public List<Cliente> getClientes(){
 		return  clienteService.todos();
 	}
-
-	public Boolean getMonitoring() {
-		this.monitoring = !Boolean.getBoolean("javamelody.disabled");
-		return monitoring;
-	}
-
-	public void setMonitoring(Boolean monitoring) {
-		this.monitoring = monitoring;
-		System.setProperty("javamelody.disabled", String.valueOf(this.monitoring));
-	}
-	
-	public void updtaePropertie(){
-		setMonitoring(this.monitoring);
-	}
 	
 }

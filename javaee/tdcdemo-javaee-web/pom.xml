@@ -126,6 +126,16 @@
    </dependencies>
 
    <build>
+   
+   <!-- resources> 
+        <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.java</include>
+                </includes>
+        </resource>
+    </resources-->
+   
       <finalName>${project.artifactId}</finalName>
       <plugins>
          <plugin>
@@ -137,7 +147,7 @@
             </configuration>
          </plugin>
          
-         	<plugin>
+         	<!-- plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-source-plugin</artifactId>
 				<executions>
@@ -148,7 +158,7 @@
 						</goals>
 					</execution>
 				</executions>
-			</plugin>
+			</plugin-->
          
       </plugins>
    </build>

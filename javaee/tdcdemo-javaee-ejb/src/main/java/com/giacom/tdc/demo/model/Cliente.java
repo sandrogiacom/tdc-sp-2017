@@ -15,9 +15,9 @@ import org.hibernate.validator.constraints.NotEmpty;
 public class Cliente {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.TABLE)
-	@TableGenerator(name = "CLIENTE_SEQ", table = "SEQUENCES",pkColumnName = "SEQ_NAME",
-    valueColumnName = "SEQ_NUMBER", pkColumnValue = "SEQUENCE",  allocationSize=1)
+	@GeneratedValue(strategy = GenerationType.TABLE, generator="CLIENTE_SEQ")
+	@TableGenerator(name = "CLIENTE_SEQ", table = "ID_GEN",pkColumnName = "SEQ_NAME",
+    valueColumnName = "SEQ_NUMBER", pkColumnValue = "CLIENTE_SEQ",  allocationSize=1)
 	private Long codigo;
 	
 	@NotEmpty(message = "Nome é obrigatório")
